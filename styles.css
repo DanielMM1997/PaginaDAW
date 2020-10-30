@@ -1,6 +1,6 @@
 /* Estilos generales */
 .links {
-    text-decoration: none;
+    color: #000000;
 }
 
 /* Estilos para la cabecera de la pagina */
@@ -84,8 +84,8 @@
 .footer {
     width: 100%;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     background-color: #0079BD;
 }
 
@@ -185,7 +185,7 @@
     display: block;
     padding-top: 5px;
     width: 100%;
-    margin: 10px 0;
+    margin: 5px 0 20px 0;
     font-size: 20px;
 }
 
@@ -198,12 +198,9 @@
     cursor: pointer;
     border-radius: 20px;
     margin: auto;
+    margin-top: 30px;
 }
 
 .formlogin input[type="submit"]:hover{
     opacity: 1;
-}
-
-.formlogin input[type="submit"]:active{
-    transform: scale(0.95);
 }
