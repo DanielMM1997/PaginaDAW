@@ -20,11 +20,15 @@
 }
 
 .title {
-    width: 30%;
+    width: 50%;
+}
+
+.title h1{
+    font-size: 70px;
 }
 
 .options {
-    width: 50%;
+    width: 30%;
     text-align: right;
     padding-right: 10px;
     margin: auto;
@@ -148,6 +152,7 @@
 
 .imagen img{
     width: 100%;
+    max-width: 850px;
     height: auto;
     border: solid;
 }
