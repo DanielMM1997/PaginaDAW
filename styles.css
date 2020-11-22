@@ -1,5 +1,4 @@
 /* Estilos generales */
-
 .links {
   color: #000000;
 }
@@ -8,6 +7,9 @@ h1 {
   font-size: 6em;
 }
 
+.menu-hidden {
+  display: none;
+}
 /* Estilos para la cabecera de la pagina */
 
 .header {
@@ -44,7 +46,7 @@ h1 {
   width: 20%;
   background-color: #009DF5;
   /* min-width: 100px; */
-  /* max-width: 200px; */
+  max-width: 200px;
 }
 
 .nav-item a {
@@ -59,7 +61,7 @@ h1 {
 }
 
 .article {
-  width: 80%;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -201,36 +203,26 @@ img {
   opacity: 1;
 }
 
-/*
-@media screen and (min-width: 64em) {
-  .my-nav {
-    width: 100%;
+@media screen and (max-width: 64em) {
+  h1 {
+    font-size: 4em;
   }
-
+  h2 {
+    font-size: 2em;
+  }
   .body {
     display: block;
   }
-
-  .left-nav li {
-    float: left;
-    display: inline;
+  .title {
+    width: 80%;
   }
-
-  .left-nav li a {
-    display: block;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-}
-
-@media screen and (min-width: 48.75em) {
-  h1 {
-    font-size: 2em;
-  }
-  .left-nav {
+  .menu-hidden {
     display: none;
+  }
+  .my-nav {
+    display: block;
+    width: 100%;
+    max-width: 3000px;
   }
   .formlogin {
     width: 100%;
@@ -241,4 +233,27 @@ img {
     margin-bottom: 0;
   }
 }
-}*/
+
+@media screen and (max-width: 40em) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .title {
+    width: 80%;
+  }
+  .my-nav {
+    display: none;
+  }
+  .options {
+    display: none;
+  }
+  .body {
+    display: block;
+  }
+  .menu-hidden{
+    display: block;
+  }
+}
