@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -17,25 +16,37 @@
       <a href="index.html"><img class="logo" src="imgs/logo.png" alt="logo"></a>
     </div>
     <div class="title">
-      <h1>Wallpaper house</h1>
+      <h1>Wallpapers house</h1>
     </div>
     <div class="options">
-      <a class="links" href="view_registration.html">Registrate</a>
-      <a class="links" href="view_profile.html">Iniciar sesión</a>
-      <div class="search">
-        <form class="form-inline" action="">
-          <input class="form-control" type="search" name="query" placeholder="Buscar...">
-          <input class="btn btn-success" type="submit" value="buscar">
-        </form>
+      <div class="row">
+        <a class="links" href="view_registration.html">Registrate</a>
+        <a class="links" href="view_profile.html">Iniciar sesión</a>
+      </div>
+      <div class="row">
+        <div class="search">
+          <form class="form-inline" action="">
+            <input class="form-control" type="search" name="query" placeholder="Buscar...">
+            <button class="btn btn-success" type="submit" value="buscar">
+              <img src="imgs/search-alt-2-regular-24.png" alt="buscar">
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="menu-hidden float-left">
-      <img src="/imgs/menu-regular-24.png" alt="menu">
+    <div class="menu-hidden">
+      <img src="imgs/menu-regular-24.png" alt="menu">
     </div>
   </header>
   <div class="body">
     <nav class="my-nav">
       <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link d-none" href="view_profile.html">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-none" href="view_registration.html">Resgistrate</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" href="view_categories.html">Fondos recientes</a>
         </li>
@@ -79,26 +90,27 @@
         <div class="container-fluid">
           <h2>Imagenes detacadas</h2>
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 responsive">
               <img src="imgs/basico.png" alt="imagen">
             </div>
-            <div class="col-4">
+            <div class="col-4 responsive">
               <img src="imgs/basico.png" alt="imagen">
             </div>
-            <div class="col-4">
+            <div class="col-4 responsive">
+              <img src="imgs/basico.png" alt="imagen">
+            </div>
+            <div class="col-4 responsive">
+              <img src="imgs/basico.png" alt="imagen">
+            </div>
+            <div class="col-4 responsive">
+              <img src="imgs/basico.png" alt="imagen">
+            </div>
+            <div class="col-4 responsive">
               <img src="imgs/basico.png" alt="imagen">
             </div>
           </div>
-          <div class="row">
-            <div class="col-4">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
+          <div class="row justify-content-end pr-3">
+            <a class="" href="">Ver todas &raquo</a>
           </div>
         </div>
       </section>
@@ -106,26 +118,27 @@
         <div class="container-fluid">
           <h2>Imagenes recientes</h2>
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 responsive">
               <img src="imgs/basico.png" alt="imagen">
             </div>
-            <div class="col-4">
+            <div class="col-4 responsive">
               <img src="imgs/basico.png" alt="imagen">
             </div>
-            <div class="col-4">
+            <div class="col-4 responsive">
+              <img src="imgs/basico.png" alt="imagen">
+            </div>
+            <div class="col-4 responsive">
+              <img src="imgs/basico.png" alt="imagen">
+            </div>
+            <div class="col-4 responsive">
+              <img src="imgs/basico.png" alt="imagen">
+            </div>
+            <div class="col-4 responsive">
               <img src="imgs/basico.png" alt="imagen">
             </div>
           </div>
-          <div class="row">
-            <div class="col-4">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
+          <div class="row justify-content-end pr-3">
+            <a class="" href="">Ver todas &raquo</a>
           </div>
         </div>
       </section>
@@ -142,6 +155,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
