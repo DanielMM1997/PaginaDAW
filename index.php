@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="row justify-content-end pr-3">
-            <a class="" href="">Ver todas &raquo</a>
+            <a class="btn btn-primary" href="view_categories.php?category=destacados">Ver todas &raquo</a>
           </div>
         </div>
       </section>
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="row justify-content-end pr-3">
-            <a class="" href="">Ver todas &raquo</a>
+            <a class="btn btn-primary" href="view_categories.php?category=recientes">Ver todas &raquo</a>
           </div>
         </div>
       </section>

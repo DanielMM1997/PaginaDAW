@@ -26,10 +26,10 @@
                 <div class=\"options\">
                   <div class=\"row\">
                     <div class=\"col\">
-                      <a class=\"links\" href=\"view_registration.php\">Regístrate</a>
+                      <a class=\"links\" href=\"view_profile.php\">Iniciar sesión</a>
                     </div>
                     <div class=\"col\">
-                      <a class=\"links\" href=\"view_profile.php\">Iniciar sesión</a>
+                      <a class=\"links\" href=\"view_registration.php\">Regístrate</a>
                     </div>
                   </div>
                   <div class=\"row\">
