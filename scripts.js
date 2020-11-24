@@ -97,22 +97,24 @@ if ($(window).width() >= 768 && $(window).width() <= 1024) {
 window.onload = function () {
   var url = 'content/backgrounds.json';
   var request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.onload = function() {
-        if (request.status == 200) {
-            console.log(request.responseText);
-            updateSales(request.responseText);
-        }
-    };
-    request.send(null);
+  request.open("GET", url);
+  request.onload = function () {
+    if (request.status == 200) {
+      updateImages(request.responseText);
+    }
+  };
+  request.send(null);
 }
 
-function updateSales(responseText) {
-  var salesDiv = document.getElementById("sales");
+function updateImages(responseText) {
   var datos = JSON.parse(responseText);
-  // for (const i of datos) {
-
-  // }
+  for (let i = 0; i < 6; i++) {
+    for (var j in datos['backgrounds'][i]) {
+      console.log(datos['backgrounds'][i][j]['url']);
+      var img = '<div class="col-4 responsive"><img src="'+datos['backgrounds'][i][j]['url']+'" alt="'+datos['backgrounds'][i][j]['title']+'"></div>';
+      $('rellenar').append(img);
+    }
+  }
 }
 
 // $(document).ready(function () {
