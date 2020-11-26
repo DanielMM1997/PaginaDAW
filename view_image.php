@@ -1,16 +1,20 @@
 <?php
   include_once 'presentation.class.php';
-  $title = "Wallpapers House - {$_GET['category']}";
+  $id = $_GET['id'];
+  $category = $_GET['category'];
+  $title = "Wallpapers House";
   View::start($title);
+  View::header();
+  View::navegation();
 ?>
 
     <article class="article">
       <section class="destacados">
         <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="imagen">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
+          <div class="row rellenarImagen">
+            <!-- <div class="imagen"> -->
+              <!-- <img src="imgs/basico.png" alt="me gusta"> -->
+            <!-- </div> -->
           </div>
           <div class="row">
             <div class="actions">
@@ -26,25 +30,8 @@
       <section class="recientes">
         <div class="container-fluid">
           <h2>Imágenes similares</h2>
-          <div class="row">
-            <div class="col-2 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-2 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-2 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-2 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-2 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-2 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
+          <div class="row rellenarCategorias"></div>
+          <div id="pagination" class="row justify-content-center my-4"></div>
           </div>
         </div>
       </section>
@@ -52,5 +39,9 @@
   </div>
   
 <?php 
+  View::footer();
+  View::scripts();
+  echo '<script type="text/javascript">updateImage("'. $id . '"); </script>';
+  echo '<script type="text/javascript">updateImagesCategories("'. $category . '"); </script>';
   View::end();
 ?>

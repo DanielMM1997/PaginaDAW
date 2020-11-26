@@ -20,8 +20,8 @@ h1 {
 
 .logotipo {
   width: 20%;
-  min-width: 100px;
-  max-width: 200px;
+  /* min-width: 100px; */
+  /* max-width: 200px; */
 }
 
 .logo {
@@ -29,14 +29,14 @@ h1 {
 }
 
 .title {
-  width: 60%;
+  /* width: 60%; */
   padding-left: 1em;
   margin: auto;
 }
 
 .options {
   /* text-align: right; */
-  padding-right: 10px;
+  /* padding-right: 10px; */
   margin: auto;
 }
 
@@ -46,7 +46,7 @@ h1 {
   width: 20%;
   background-color: #009DF5;
   /* min-width: 100px; */
-  max-width: 200px;
+  /* max-width: 200px; */
 }
 
 .nav-item a {
@@ -57,11 +57,11 @@ h1 {
 
 .body {
   width: 100%;
-  display: inline-flex;
+  /* display: inline-flex; */
 }
 
 .article {
-  width: 100%;
+  width: 80%;
   margin-bottom: 20px;
 }
 
@@ -240,6 +240,7 @@ body { font-family: sans-serif; }
   }
   .article {
     margin-bottom: 0;
+    width: 100%;
   }
 }
 
@@ -264,6 +265,10 @@ body { font-family: sans-serif; }
   }
   .body {
     display: block;
+  }
+  .article {
+    margin-bottom: 0;
+    width: 100%;
   }
   .menu-hidden {
     display: block;

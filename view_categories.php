@@ -1,60 +1,24 @@
 <?php
   include_once 'presentation.class.php';
-  $title = "Wallpapers House - {$_GET['category']}";
+  $category = $_GET['category'];
+  $title = "Wallpapers House - {$category}";
   View::start($title);
+  View::header();
+  View::navegation();
 ?>
 
     <article class="article">
       <section class="destacados">
         <div class="container-fluid">
-          <h2><?php echo ucfirst($_GET['category']);?></h2>
-          <div class="row">
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-            <div class="col-4 responsive">
-              <img src="imgs/basico.png" alt="imagen">
-            </div>
-          </div>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-            </ul>
-          </nav>
+          <h2><?php echo ucfirst($category);?></h2>
+          <div class="row rellenarCategorias"></div>
+          <div id="pagination" class="row justify-content-center my-4"></div>
         </div>
       </section>
     </article>
-  </div>
-
 <?php 
+  View::footer();
+  View::scripts();
+  echo '<script type="text/javascript">updateImagesCategories("'.$category.'"); </script>';
   View::end();
 ?>

@@ -2,6 +2,8 @@
   include_once 'presentation.class.php';
   $title = "Wallpapers House - Regístrate";
   View::start($title);
+  View::header();
+  View::navegation();
 ?>
     <article class="article">
       <section>
@@ -34,5 +36,7 @@
   </div>
   
 <?php 
+  View::footer();
+  View::scripts();
   View::end();
 ?>
