@@ -1862,6 +1862,114 @@
         "tags": "tenis-roger federer-raqueta-blanco-negro-celebrar",
         "categories": "tenis"
       }
+    ],
+    [
+      {
+        "id": 208,
+        "title": "Búho en el bosque",
+        "url": "content/backgrounds/animales-buho-blanco-verde-bosque.jpg",
+        "tags": "animales-buho-blanco-verde-bosque",
+        "categories": "destacados"
+      }
+    ],
+    [
+      {
+        "id": 209,
+        "title": "Caballo galopando en la playa",
+        "url": "content/backgrounds/animales-caballo-galopando-agua-mar-playa.jpg",
+        "tags": "animales-caballo-galopando-agua-mar-playa",
+        "categories": "destacados"
+      }
+    ],
+    [
+      {
+        "id": 210,
+        "title": "Cebras en blanco y negro",
+        "url": "content/backgrounds/animales-cebras-blanco y negro.jpg",
+        "tags": "animales-cebras-blanco y negro",
+        "categories": "destacados"
+      }
+    ],
+    [
+      {
+        "id": 211,
+        "title": "Cerdito en la hierba",
+        "url": "content/backgrounds/animales-cerdito-pequeño-hierba-verde.jpg",
+        "tags": "animales-cerdito-pequeño-hierba-verde",
+        "categories": "destacados"
+      }
+    ],
+    [
+      {
+        "id": 212,
+        "title": "Dos delfines saludando",
+        "url": "content/backgrounds/animales-delfines-agua.jpg",
+        "tags": "animales-delfines-agua",
+        "categories": "destacados"
+      }
+    ],
+    [
+      {
+        "id": 213,
+        "title": "Pequeña foca en la nieve",
+        "url": "content/backgrounds/animales-foca-pequeño-nieve.jpg",
+        "tags": "animales-foca-pequeño-nieve",
+        "categories": "destacados"
+      }
+    ],
+    [
+      {
+        "id": 214,
+        "title": "Gansos volando",
+        "url": "content/backgrounds/animales-gansos-aves-volando.jpg",
+        "tags": "animales-gansos-aves-volando",
+        "categories": "recientes"
+      }
+    ],
+    [
+      {
+        "id": 215,
+        "title": "Gato mirando fijamente",
+        "url": "content/backgrounds/animales-gato-ojos-mirar-mirando.jpg",
+        "tags": "animales-gato-ojos-mirar-mirando",
+        "categories": "recientes"
+      }
+    ],
+    [
+      {
+        "id": 216,
+        "title": "Halcón en primer plano",
+        "url": "content/backgrounds/animales-halcon-aves-primer plano.jpg",
+        "tags": "animales-halcon-aves-primer plano",
+        "categories": "recientes"
+      }
+    ],
+    [
+      {
+        "id": 217,
+        "title": "Hipopótamo en el río",
+        "url": "content/backgrounds/animales-hipopotamo-agua.jpg",
+        "tags": "animales-hipopotamo-agua",
+        "categories": "recientes"
+      }
+    ],
+    [
+      {
+        "id": 218,
+        "title": "Jirafas en la pradera",
+        "url": "content/backgrounds/animales-jirafas.jpg",
+        "tags": "animales-jirafas",
+        "categories": "recientes"
+      }
+    ],
+    [
+      {
+        "id": 219,
+        "title": "León sobre fondo negro",
+        "url": "content/backgrounds/animales-leon.jpg",
+        "tags": "animales-leon",
+        "categories": "recientes"
+      }
     ]
   ]
 }

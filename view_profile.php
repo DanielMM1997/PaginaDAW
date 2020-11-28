@@ -6,7 +6,7 @@
   View::navegation();
 ?>
 
-    <article class="article">
+    <article class="article col-lg-10 col-12">
       <section class="perfil">
         <div class="container-fluid">
           <div class="row">

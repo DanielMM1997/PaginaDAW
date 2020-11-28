@@ -1,37 +1,50 @@
 /* Estilos generales */
-.links {
-  color: #000000;
+h1 {
+  font-size: 6vw;
 }
 
-h1 {
-  font-size: 6em;
+h2 {
+  font-size: 2vw;
+}
+a, p {
+  font-size: 1vw;
+}
+
+span {
+  color: #c71010;
+}
+
+.nolinks {
+  color: #000000;
 }
 
 .menu-hidden {
   display: none;
 }
-/* Estilos para la cabecera de la pagina */
 
-.header {
+#movil_search {
+  display: none;
   width: 100%;
-  display: flex;
+  /* display: contents; */
+}
+#movil_search input{
+  width: 100%;
+}
+
+/* Estilos para la cabecera de la pagina */
+.header {
   background-color: #009DF5;
 }
 
-.logotipo {
-  width: 20%;
-  /* min-width: 100px; */
-  /* max-width: 200px; */
+.logo {
+  width: 80%;
 }
 
-.logo {
-  width: 100%;
-}
 
 .title {
-  /* width: 60%; */
-  padding-left: 1em;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .options {
@@ -39,12 +52,14 @@ h1 {
   /* padding-right: 10px; */
   margin: auto;
 }
+.search {
+  flex-flow: nowrap;
+}
 
 /* Estilos para la barra de navegacion */
-
 .my-nav {
   width: 20%;
-  background-color: #009DF5;
+  background-color: #15a5f8;
   /* min-width: 100px; */
   /* max-width: 200px; */
 }
@@ -53,15 +68,19 @@ h1 {
   color: #000000;
 }
 
+.nav li:hover{
+  background-color: #0079BD;
+}
+
 /* Estilos para el cuerpo de la pagina */
 
 .body {
-  width: 100%;
+  /* width: 100%; */
   /* display: inline-flex; */
 }
 
 .article {
-  width: 80%;
+  /* width: 80%; */
   margin-bottom: 20px;
 }
 
@@ -77,6 +96,8 @@ h1 {
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: #0079BD;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* Estilos para sola una imagen */
@@ -92,9 +113,9 @@ h1 {
 }
 
 .actions {
-  display: inline-flex;
-  width: 100%;
-  justify-content: center;
+  /* display: inline-flex; */
+  /* width: 100%; */
+  /* justify-content: center; */
 }
 
 .actions img {
@@ -212,18 +233,12 @@ body { font-family: sans-serif; }
   display: none;
 }
 
-@media screen and (max-width: 64em) {
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 2em;
-  }
+@media screen and (max-width: 62em) {
   .body {
     display: block;
   }
   .title {
-    width: 80%;
+    /* width: 80%; */
   }
   .menu-hidden {
     display: none;
@@ -240,31 +255,24 @@ body { font-family: sans-serif; }
   }
   .article {
     margin-bottom: 0;
-    width: 100%;
+    /* width: 100%; */
   }
 }
 
-@media screen and (max-width: 40em) {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  a {
-    font-size: 1.5em;
-  }
+@media screen and (max-width: 48em) {
   .title {
-    width: 70%;
+    /* width: 70%; */
   }
   .my-nav {
     display: none;
+    margin-top: 9%;
   }
   .options {
     display: none;
   }
   .body {
     display: block;
+    margin-top: 8%;
   }
   .article {
     margin-bottom: 0;
@@ -272,7 +280,11 @@ body { font-family: sans-serif; }
   }
   .menu-hidden {
     display: block;
-    width: 10%;
-    padding-top: 60px;
   }
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
+  
 }

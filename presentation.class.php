@@ -20,58 +20,88 @@ class View
   public static function header()
   {
     echo "<body>
-              <header class='header'>
-                <div class='logotipo col-2'>
+              <header class='header row mx-0'>
+                <div class='logo col-2'>
                   <a href='index.php'><img class='logo' src='imgs/logo.png' alt='logo'></a>
                 </div>
-                <div class='title col-6'>
+                <div class='title col-8 col-md-7 col-xl-6'>
                   <h1>Wallpapers house</h1>
+                  <form id='movil_search' class='form-inline' action=''>
+                    <input class='form-control' type='search' name='query' placeholder='Buscar...'>
+                  </form>
                 </div>
-                <div class='options col-4'>
-                  <div class='row mb-4 justify-content-end'>
-                    <div class='col-4'>
-                      <a class='links' href='view_profile.php'>Iniciar sesión</a>
+                <div class='options col-2 col-md-3 col-xl-4 pr-4'>
+                  <div class='row mb-xl-4 mb-2 mx-0 justify-content-end'>
+                    <div class='pr-4'>
+                      <a class='nolinks' href='view_profile.php'>Iniciar sesión</a>
                     </div>
-                    <div class='col-4'>
-                      <a class='links' href='view_registration.php'>Regístrate</a>
+                    <div class=''>
+                      <a class='nolinks' href='view_registration.php'>Regístrate</a>
                     </div>
                   </div>
-                  <div class='row justify-content-end pr-3'>
-                    <div class='search'>
-                      <form class='form-inline' action=''>
-                        <input class='form-control' type='search' name='query' placeholder='Buscar...'>
-                        <button class='btn btn-success' type='submit' value='buscar'>
-                          <img src='imgs/search-alt-2-regular-24.png' alt='buscar'>
-                        </button>
-                      </form>
-                    </div>
+                  <div class='row mx-0 justify-content-end'>
+                    <form class='form-inline search' action=''>
+                      <input class='form-control' type='search' name='query' placeholder='Buscar...'>
+                      <button class='btn btn-success' type='submit' value='buscar'>
+                        <img src='imgs/search-alt-2-regular-24.png' alt='buscar'>
+                      </button>
+                    </form>
                   </div>
                 </div>
-                <div class='menu-hidden'>
-                  <img src='imgs/menu-regular-24.png' alt='menu'>
+                <div class='menu-hidden align-self-center'>
+                  <img class='search' src='imgs/search-alt-2-regular-24.png' alt='menu'>
+                  <img class='menu' src='imgs/menu-regular-24.png' alt='menu'>
                 </div>
               </header>";
   }
 
   public static function navegation()
   {
-      echo "<div class='row body mx-0'>
-                <nav class='my-nav'>
-                  <ul class='nav flex-column pl-4'>
-                    <li class='nav-item'><a class='nav-link d-none' href='view_profile.php'>Iniciar sesión</a></li>
-                    <li class='nav-item'><a class='nav-link d-none' href='view_registration.php'>Regístrate</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=recientes'>Fondos recientes</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=destacados'>Fondos destacados</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=animales'>Animales</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=paisajes'>Paisaje</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=universo'>Universo</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=ciudades'>Cuidades</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=futbol'>Fútbol</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=baloncesto'>Baloncesto</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=tenis'>Tenis</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=coches'>Coches</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=motos'>Motos</a></li>
-                    <li class='nav-item'><a class='nav-link' href='view_categories.php?category=aviones'>Aviones</a></li>
+    echo "<div class='row body mx-0'>
+                <nav class='my-nav col-2 px-0 '>
+                  <ul class='nav flex-column'>
+                    <li class='nav-item'>
+                      <a class='nav-link d-none' href='view_profile.php'>Iniciar sesión</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link d-none' href='view_registration.php'>Regístrate</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=recientes'>Fondos recientes</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=destacados'>Fondos destacados</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=animales'>Animales</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=paisajes'>Paisaje</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=universo'>Universo</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=ciudades'>Cuidades</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=futbol'>Fútbol</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=baloncesto'>Baloncesto</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=tenis'>Tenis</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=coches'>Coches</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=motos'>Motos</a>
+                    </li>
+                    <li class='nav-item'>
+                      <a class='nav-link' href='view_categories.php?category=aviones'>Aviones</a>
+                    </li>
                   </ul>
                 </nav>";
   }
@@ -79,9 +109,9 @@ class View
   public static function footer()
   {
     echo '<footer class="footer">
-            <a class="links" href="#">¿Quiénes somos?</a>
-            <a class="links" href="#">Contacta con nosotros</a>
-            <a class="links" href="#">Política de privacidad</a>
+            <a class="nolinks" href="#">¿Quiénes somos?</a>
+            <a class="nolinks" href="#">Contacta con nosotros</a>
+            <a class="nolinks" href="#">Política de privacidad</a>
             </footer>';
   }
 
@@ -95,8 +125,9 @@ class View
           <script src="scripts.js"></script>';
   }
 
-  public static function end() {
-      echo '</body>
+  public static function end()
+  {
+    echo '</body>
       </html>';
   }
 }

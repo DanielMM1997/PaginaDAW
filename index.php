@@ -4,22 +4,24 @@
   View::header();
   View::navegation();
 ?>
-    <article class="article">
+    <article class="article col-lg-10 col-12">
       <section class="destacados">
-        <div class="container-fluid">
-          <h2>Imágenes destacadas</h2>
-          <div class="row rellenarDestacadas"></div>
+        <div class="container-fluid p-3">
+          <div class="my-3">
+            <h2>Imágenes destacadas</h2>
+          </div>
+          <div class="row rellenarDestacadas mx-0"></div>
           <div class="row justify-content-end pr-3">
-            <a class="btn btn-primary" href="view_categories.php?category=destacados">Ver todas &raquo</a>
+            <a class="btn btn-outline-primary" href="view_categories.php?category=destacados">Ver todas &raquo</a>
           </div>
         </div>
       </section>
       <section class="recientes">
-        <div class="container-fluid">
+        <div class="container-fluid p-3">
           <h2>Imágenes recientes</h2>
-          <div class="row rellenarRecientes"></div>
+          <div class="row rellenarRecientes mx-0"></div>
           <div class="row justify-content-end pr-3">
-            <a class="btn btn-primary" href="view_categories.php?category=recientes">Ver todas &raquo</a>
+            <a class="btn btn-outline-primary" href="view_categories.php?category=recientes">Ver todas &raquo</a>
           </div>
         </div>
       </section>
@@ -28,6 +30,5 @@
 <?php 
   View::footer();
   View::scripts();
-  echo '<script type="text/javascript">addListener(); </script>';
   View::end();
 ?>

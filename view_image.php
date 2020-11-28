@@ -8,15 +8,12 @@
   View::navegation();
 ?>
 
-    <article class="article">
+    <article class="article col-lg-10 col-12">
       <section class="destacados">
-        <div class="container-fluid">
+        <div class="container-xl">
           <div class="row rellenarImagen">
-            <!-- <div class="imagen"> -->
-              <!-- <img src="imgs/basico.png" alt="me gusta"> -->
-            <!-- </div> -->
           </div>
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="actions">
               <img src="imgs/heart-regular-24.png" alt="me gusta">
               <img src="imgs/download-regular-24.png" alt="descargar">
