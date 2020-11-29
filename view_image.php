@@ -26,7 +26,7 @@
       </section>
       <section class="recientes">
         <div class="container-fluid">
-          <h2>Imágenes similares</h2>
+          <h2>Fondos similares</h2>
           <div class="row rellenarCategorias"></div>
           <div id="pagination" class="row justify-content-center my-4"></div>
           </div>

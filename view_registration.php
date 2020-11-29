@@ -26,7 +26,7 @@
             <div class="form-group">
               <label for="">Contraseña</label>
               <input type="password" class="form-control" id="contraseña"
-              required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{6,}$" minlength="6" maxlength="32"
+              required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$" minlength="8" maxlength="32"
               title="Debes introducir mínimo un número, una mayuscula y una minuscula">
               <span id="span_contra"></span>
             </div>

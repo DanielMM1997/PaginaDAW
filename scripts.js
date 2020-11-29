@@ -34,7 +34,6 @@ $('.menu-hidden .search').on('click', function () {
   $('#movil_search').toggle();
 });
 
-
 function getJSON(url) {
   var request = new XMLHttpRequest();
   request.open("GET", url, false);

@@ -6,7 +6,7 @@
   View::navegation();
 ?>
   <div class="col pt-3">
-    <h1>Te has resgistrado correctamente</h1>
+    <h2>Te has resgistrado correctamente</h2>
     <a href="/index.php">Pulsa aqui para volver al inico</a>
   </div>
 

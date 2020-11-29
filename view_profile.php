@@ -14,9 +14,9 @@
               <img class="logo" src="imgs/profile.png" alt="imagen">
             </div>
             <div class="col-6 align-self-center">
-              <p>Nombre usuario</p>
-              <p>Correo</p>
-              <p>Teléfono</p>
+              <p>Nombre usuario: </p>
+              <p>Correo electronico: </p>
+              <p>Teléfono: </p>
             </div>
             <div class="col-3 align-self-center">
               <div class="upload">

@@ -16,6 +16,7 @@
         </div>
       </section>
     </article>
+    
 <?php 
   View::footer();
   View::scripts();
