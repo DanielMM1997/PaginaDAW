@@ -30,8 +30,8 @@
         </div>
       </section>
       <section class="destacados">
+        <h3>Fondos favoritos</h3>
         <div class="mb-5">
-
           <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
             <div class="gallery-cell"><img src="imgs/basico.png" alt="imagen"></div>
             <div class="gallery-cell"><img src="imgs/basico.png" alt="imagen"></div>
