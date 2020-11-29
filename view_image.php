@@ -10,7 +10,7 @@
 
     <article class="article col-lg-10 col-12">
       <section class="destacados">
-        <div class="container-xl">
+        <div class="container-xl p-lg-3 p-0">
           <div class="row rellenarImagen">
           </div>
           <div class="row justify-content-center">

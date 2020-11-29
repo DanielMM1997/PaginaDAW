@@ -34,21 +34,42 @@ $('.menu-hidden .search').on('click', function () {
   $('#movil_search').toggle();
 });
 
-window.onload = function () {
-  var url = 'content/backgrounds.json';
+
+function getJSON(url) {
   var request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.onload = function () {
-    if (request.status == 200) {
-      updateImagesDestacadas(request.responseText);
-      updateImagesRecientes(request.responseText);
-    }
-  };
+  request.open("GET", url, false);
   request.send(null);
+  return request.status == 200 ? JSON.parse(request.responseText) : ''
 }
 
-function updateImagesDestacadas(responseText) {
-  var datos = JSON.parse(responseText);
+function getCategory(category) {
+  var datos = getJSON('content/backgrounds.json');
+  var onylThisCategory = [];
+  $.each(datos.backgrounds, function (i, element) {
+    for (let field = 0; field < element.length; field++) {
+      if (element[field].categories == category) {
+        onylThisCategory.push(element);
+      }
+    }
+  });
+  return onylThisCategory;
+}
+
+function getImage(id) {
+  var datos = getJSON('content/backgrounds.json');
+  var imagen;
+    $.each(datos.backgrounds, function (i, element) {
+    for (let field = 0; field < element.length; field++) {
+      if (element[field].id == id) {
+        imagen = element[field];
+      }
+    }
+  });
+  return imagen;
+}
+
+function updateImagesDestacadas() {
+  var datos = getJSON('content/backgrounds.json');
   for (let i = 0; i < 6; i++) {
     for (var j in datos['backgrounds'][i]) {
       var img = '<div class="col-' + colunmSize + ' responsive p-1">' +
@@ -59,8 +80,8 @@ function updateImagesDestacadas(responseText) {
   }
 }
 
-function updateImagesRecientes(responseText) {
-  var datos = JSON.parse(responseText);
+function updateImagesRecientes() {
+  var datos = getJSON('content/backgrounds.json');
   for (let i = 6; i < 12; i++) {
     for (var j in datos['backgrounds'][i]) {
       var img = '<div class="col-' + colunmSize + ' responsive p-1">' +
@@ -72,59 +93,30 @@ function updateImagesRecientes(responseText) {
 }
 
 function updateImagesCategories(category) {
-  var url = 'content/backgrounds.json';
-  var request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.onload = function () {
-    if (request.status == 200) {
-      var datos = JSON.parse(request.responseText);
-      var onylThisCategory = [];
-      $.each(datos.backgrounds, function (i, arr) {
-        for (let ele = 0; ele < arr.length; ele++) {
-          if (arr[ele].categories == category) {
-            onylThisCategory.push(arr);
-          }
-        }
-      });
-      $('#pagination').pagination({
-        dataSource: onylThisCategory,
-        pageSize: 6,
-        callback: function (data, pagination) {
-          $('.rellenarCategorias').empty();
-          $.each(data, function (i, arr) {
-            for (let ele = 0; ele < arr.length; ele++) {
-              var img = '<div class="col-' + colunmSize + ' responsive p-1">' +
-                '<a href="view_image.php?id=' + arr[ele].id + '&category=' + arr[ele].categories + '">' +
-                '<img id="' + arr[ele].id + '" src="' + arr[ele].url + '" alt="' + arr[ele].title + '"></a></div>';
-              $('.rellenarCategorias').append(img);
-            }
-          });
+  var thisCategory = getCategory(category);
+  $('#pagination').pagination({
+    dataSource: thisCategory,
+    pageSize: 6,
+    callback: function (data, pagination) {
+      $('.rellenarCategorias').empty();
+      $.each(data, function (i, element) {
+        for (let field = 0; field < element.length; field++) {
+          var img = '<div class="col-' + colunmSize + ' responsive p-1">' +
+            '<a href="view_image.php?id=' + element[field].id + '&category=' + element[field].categories + '">' +
+            '<img id="' + element[field].id + '" src="' + element[field].url + '" alt="' + element[field].title + '"></a></div>';
+          $('.rellenarCategorias').append(img);
         }
       });
     }
-  }
-  request.send(null);
+  });
 }
 
+
 function updateImage(id) {
-  var url = 'content/backgrounds.json';
-  var request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.onload = function () {
-    if (request.status == 200) {
-      var datos = JSON.parse(request.responseText);
-      $.each(datos.backgrounds, function (i, arr) {
-        for (let ele = 0; ele < arr.length; ele++) {
-          if (arr[ele].id == id) {
-            var img = '<div class="col-12 responsive p-3">' +
-              '<img id="' + arr[ele].id + '" src="' + arr[ele].url + '" alt="' + arr[ele].title + '"></div>';
-            $('.rellenarImagen').append(img);
-          }
-        }
-      });
-    }
-  }
-  request.send(null);
+  var ele = getImage(id);
+  var img = '<div class="col-12 responsive p-3">' +
+    '<img id="' + ele['id'] + '" src="' + ele['url'] + '" alt="' + ele['title'] + '"></div>';
+  $('.rellenarImagen').append(img);
 }
 
 function validarDatos() {
@@ -143,17 +135,18 @@ function validarDatos() {
     $('#span_correo').text("El eamil debe tener de 6 a 32 caracteres");
     return false;
   }
-  if (contra.length <= 8 ) {
+  if (contra.length <= 8) {
     $("#span_contra").text("La contraseña debe tener más de 8 caracteres");
     return false;
   }
-  if (contra2.length <= 8 ) {
+  if (contra2.length <= 8) {
     $("#span_contra2").text("La contraseña debe tener más de 8 caracteres");
     return false;
-  } 
+  }
   if (contra != contra2) {
     $("#span_contra2").text("Las contraseñas son distintas");
     return false;
   }
   return true;
 }
+

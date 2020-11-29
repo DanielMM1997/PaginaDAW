@@ -8,7 +8,7 @@
 
     <article class="article col-lg-10 col-12">
       <section class="perfil">
-        <div class="container-fluid">
+        <div class="container-fluid p-lg-3 p-0">
           <div class="row">
             <div class="col-3">
               <img class="logo" src="imgs/profile.png" alt="imagen">

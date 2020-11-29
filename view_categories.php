@@ -9,7 +9,7 @@
 
     <article class="article col-lg-10 col-12">
       <section class="destacados">
-        <div class="container-fluid p-3">
+        <div class="container-fluid p-lg-3 p-0">
           <h2><?php echo ucfirst($category);?></h2>
           <div class="row rellenarCategorias mx-0"></div>
           <div id="pagination" class="row justify-content-center my-4"></div>

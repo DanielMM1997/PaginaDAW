@@ -6,7 +6,7 @@
 ?>
     <article class="article col-lg-10 col-12">
       <section class="destacados">
-        <div class="container-fluid p-3">
+        <div class="container-fluid p-lg-3 p-0">
           <div class="my-3">
             <h2>Imágenes destacadas</h2>
           </div>
@@ -30,5 +30,7 @@
 <?php 
   View::footer();
   View::scripts();
+  echo '<script type="text/javascript">updateImagesDestacadas(); </script>';
+  echo '<script type="text/javascript">updateImagesRecientes(); </script>';
   View::end();
 ?>

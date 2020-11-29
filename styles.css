@@ -1,13 +1,13 @@
 /* Estilos generales */
-h1 {
+.web_name {
   font-size: 6vw;
 }
 
 h2 {
-  font-size: 2vw;
+  font-size: 3vw;
 }
 a, p {
-  font-size: 1vw;
+  font-size: 1rem;
 }
 
 span {
@@ -25,7 +25,6 @@ span {
 #movil_search {
   display: none;
   width: 100%;
-  /* display: contents; */
 }
 #movil_search input{
   width: 100%;
@@ -40,7 +39,6 @@ span {
   width: 80%;
 }
 
-
 .title {
   display: flex;
   justify-content: center;
@@ -48,10 +46,9 @@ span {
 }
 
 .options {
-  /* text-align: right; */
-  /* padding-right: 10px; */
   margin: auto;
 }
+
 .search {
   flex-flow: nowrap;
 }
@@ -60,8 +57,6 @@ span {
 .my-nav {
   width: 20%;
   background-color: #15a5f8;
-  /* min-width: 100px; */
-  /* max-width: 200px; */
 }
 
 .nav-item a {
@@ -73,14 +68,7 @@ span {
 }
 
 /* Estilos para el cuerpo de la pagina */
-
-.body {
-  /* width: 100%; */
-  /* display: inline-flex; */
-}
-
 .article {
-  /* width: 80%; */
   margin-bottom: 20px;
 }
 
@@ -88,7 +76,6 @@ span {
   width: 100%;
   height: auto;
 }
-
 
 .footer {
   width: 100%;
@@ -110,12 +97,6 @@ span {
   width: 100%;
   height: auto;
   border: solid;
-}
-
-.actions {
-  /* display: inline-flex; */
-  /* width: 100%; */
-  /* justify-content: center; */
 }
 
 .actions img {
@@ -237,9 +218,6 @@ body { font-family: sans-serif; }
   .body {
     display: block;
   }
-  .title {
-    /* width: 80%; */
-  }
   .menu-hidden {
     display: none;
   }
@@ -255,14 +233,10 @@ body { font-family: sans-serif; }
   }
   .article {
     margin-bottom: 0;
-    /* width: 100%; */
   }
 }
 
 @media screen and (max-width: 48em) {
-  .title {
-    /* width: 70%; */
-  }
   .my-nav {
     display: none;
     margin-top: 9%;
@@ -272,7 +246,7 @@ body { font-family: sans-serif; }
   }
   .body {
     display: block;
-    margin-top: 8%;
+    margin-top: 9%;
   }
   .article {
     margin-bottom: 0;
@@ -286,5 +260,4 @@ body { font-family: sans-serif; }
     top: 0;
     z-index: 5;
   }
-  
 }

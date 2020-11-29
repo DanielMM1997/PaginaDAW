@@ -25,7 +25,7 @@ class View
                   <a href='index.php'><img class='logo' src='imgs/logo.png' alt='logo'></a>
                 </div>
                 <div class='title col-8 col-md-7 col-xl-6'>
-                  <h1>Wallpapers house</h1>
+                  <h1 class='web_name'>Wallpapers house</h1>
                   <form id='movil_search' class='form-inline' action=''>
                     <input class='form-control' type='search' name='query' placeholder='Buscar...'>
                   </form>
