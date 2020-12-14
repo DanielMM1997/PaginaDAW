@@ -258,6 +258,7 @@ body { font-family: sans-serif; }
     display: block;
   }
   .header {
+    /* encabezado */
     position: fixed;
     top: 0;
     z-index: 5;
